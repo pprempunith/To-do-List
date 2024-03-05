@@ -1,0 +1,88 @@
+*{
+    margin :0;
+    padding :0;
+font-family: 'Courier New', Courier, monospace;
+box-sizing: border-box;
+}
+
+.container{
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(145deg, rgb(229, 144, 144),rgb(211, 156, 97),rgb(183, 176, 176));
+    padding: 10px;
+}
+
+.todo{
+   width: 100%;
+   max-width: 540px;
+    color: rgb(19, 19, 45);
+    background-color: aliceblue;
+    margin:100px auto 20px;
+    padding: 40px 30px 70px;
+    border-radius: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+.row{
+    display: flex;
+    width: 100%;
+    max-width: 540px;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #edeef0;
+    border-radius: 30px;
+    padding-left: 30px;
+
+}
+
+input{
+    flex:1;
+    border: none;
+    background: transparent;
+    padding: 10px;
+    outline: none;
+}
+
+button{
+    border: none;
+    outline: none;
+    background-color: rgb(254, 137, 4);
+    padding: 16px 50px;
+    color: #fff;
+    border-radius: 30px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+ul li{
+    list-style: none;
+    font-size: 17px;
+    user-select: none;
+    cursor: pointer;
+ position: relative;
+    padding: 12px 8px 12px 50px;
+}
+
+ul li::before{
+    content: '';
+    position: absolute;
+    height: 28px;
+    width: 28px;
+    border-radius: 50%;
+    background-image: url(./images/radio.png);
+    background-size: cover;
+    background-position: center;
+    top: 10px;
+    left: 8px;
+}
+
+ul li.checked{
+    color: #555;
+    text-decoration: line-through;
+}
+ul li.checked::before{
+    background-image: url(images/checked.png);
+    
+
+}
