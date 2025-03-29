@@ -1,67 +1,85 @@
+
+/* @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@600&family=Prompt:wght@500&family=Russo+One&display=swap'); */
+
 *{
-    margin :0;
-    padding :0;
-font-family: 'Courier New', Courier, monospace;
-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family:'poppins', sans-serif;
 }
 
 .container{
     width: 100%;
     min-height: 100vh;
-    background: linear-gradient(145deg, rgb(229, 144, 144),rgb(211, 156, 97),rgb(183, 176, 176));
+    background : linear-gradient(135deg, #153677, #4e085f);
     padding: 10px;
 }
 
-.todo{
-   width: 100%;
-   max-width: 540px;
-    color: rgb(19, 19, 45);
-    background-color: aliceblue;
-    margin:100px auto 20px;
-    padding: 40px 30px 70px;
-    border-radius: 10px;
-    justify-content: center;
+.todo-app{
+width: 100%;
+max-width: 540px;
+background: #fff;
+margin: 100px auto 20px;
+padding: 40px 30px 70px;
+border-radius: 10px;
+}
+
+.todo-app h2{
+    color: #002765;
+    display: flex;
     align-items: center;
+    margin-bottom: 20px;
+
+}
+
+.todo-app h2 img{
+    width: 30px;
+    margin-left: 10px;
 }
 
 .row{
     display: flex;
-    width: 100%;
-    max-width: 540px;
-    align-items: center;
+    
     justify-content: space-between;
-    background-color: #edeef0;
+    background:#edeef0;
     border-radius: 30px;
-    padding-left: 30px;
+    padding-left: 20px;
+    margin-bottom: 25px;
+    width: 100%;
+    align-items: center;
 
 }
 
 input{
-    flex:1;
+    /* flex: 1; */
     border: none;
+    outline: none;
     background: transparent;
     padding: 10px;
-    outline: none;
+    font-weight: 14px;
+    flex-shrink: 0;
+    width: 50%;
 }
 
 button{
     border: none;
     outline: none;
-    background-color: rgb(254, 137, 4);
     padding: 16px 50px;
+    background: #ff5945 ;
     color: #fff;
-    border-radius: 30px;
-    font-size: 16px;
     cursor: pointer;
+    font-size: 16px;
+    border-radius: 40px;
+    flex-shrink: 0;
 }
 
 ul li{
     list-style: none;
     font-size: 17px;
+    padding: 12px 8px 12px 50px;
     user-select: none;
     cursor: pointer;
- position: relative;
-    padding: 12px 8px 12px 50px;
+    position: relative;
 }
 
 ul li::before{
@@ -70,21 +88,20 @@ ul li::before{
     height: 28px;
     width: 28px;
     border-radius: 50%;
-    background-image: url(./images/radio.png);
+    background-image: url(images/radio.png);
     background-size: cover;
     background-position: center;
-    top: 10px;
+    top: 8px;
     left: 8px;
 }
 
 ul li.checked{
-    color: #555;
-    text-decoration: line-through;
+color: #555;
+text-decoration: line-through;
+
 }
 ul li.checked::before{
     background-image: url(images/checked.png);
-
-
 }
 
 ul li span{
@@ -102,3 +119,6 @@ ul li span{
 ul li span:hover{
     background: #edeef0;
 }
+
+
+  
